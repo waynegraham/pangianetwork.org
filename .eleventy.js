@@ -2,7 +2,13 @@
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require('markdown-it-attrs');
 const slugify = require("slugify");
+
+// @11ty plugins
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation"); // https://www.11ty.dev/docs/plugins/navigation/
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const Image = require("@11ty/eleventy-img"); // https://www.11ty.dev/docs/plugins/image/
 
 module.exports = function (eleventyConfig) {
 
@@ -57,7 +63,7 @@ module.exports = function (eleventyConfig) {
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
     html: true,
-  }).use(markdownItAnchor, markdownItAnchorOptions);
+  }).use(markdownItAnchor, markdownItAnchorOptions).use(markdownItAttrs);
 
   // This is the part that tells 11ty to swap to our custom config
   eleventyConfig.setLibrary("md", markdownLibrary);
