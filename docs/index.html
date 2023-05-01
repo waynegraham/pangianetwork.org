@@ -17,16 +17,105 @@
 <link rel="apple-touch-icon" href="icon.png">
 <!-- Place favicon.ico in the root directory -->
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
 <link rel="stylesheet" href="/assets/css/main.css">
 <meta name="theme-color" content="#fafafa"> 
 </head>
 
 <body>
 
+  <style>
+    .bg-hero {
+        background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg');
+        height: 66vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+<section id="hero" class="bg-hero d-flex align-items-center">
+    <div class="container">
+        <div class="align-self-center p-5 text-center shadow-1-strong rounded mb-5 text-white">
+            <h1 class="mb-3">Pangia Network</h1>
+            <p>An Information Platform for Climate Challenges</p>
+        </div>
+    </div>
+</section>
+
+<section id="video" class="my-5 py-5 text-center">
+    <div class="container">
+
+        <h2 class="fs-1 fw-bold">Overview</h2>
+
+        <div class="ratio ratio-16x9 my-5">
+            <iframe src="https://www.youtube.com/embed/G5sacv_WO_o?rel=0" title="CLIR Pangia Introduction" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="what" class="py-5 text-center">
+    <div class="container py-3">
+        <h2 class="fs-1 fw-bold">What is Pangia?</h2>
+        <p>Pangia is an advanced knowledge environment designed to address the complex challenges posed by the climate crisis. Currently in an exploratory phase of development, Pangia plans to focus on three interconnected climate issues: (1) the loss of cultural heritage, (2) the dispersion and displacement of humanity, and (3) the disaggregation of essential scientific information. By providing a trusted, comprehensible, and coherent information platform, Pangia will engage the public and scholars to discover new knowledge and share information across generations.</p>
+    </div>
+</section>
+
+<section id="photos" class="d-flex flex-row">
+    <div class="col">
+        <picture><source type="image/avif" srcset="/assets/images/IWEvBWeahl-200.avif 200w, /assets/images/IWEvBWeahl-400.avif 400w, /assets/images/IWEvBWeahl-600.avif 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/IWEvBWeahl-200.jpeg 200w, /assets/images/IWEvBWeahl-400.jpeg 400w, /assets/images/IWEvBWeahl-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="earth" class="img-fluid" loading="lazy" decoding="async" src="/assets/images/IWEvBWeahl-200.jpeg" width="600" height="400"></picture>
+    </div>
+    <div class="col">
+        <picture><source type="image/avif" srcset="/assets/images/7e1vVp92Wq-200.avif 200w, /assets/images/7e1vVp92Wq-400.avif 400w, /assets/images/7e1vVp92Wq-600.avif 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/7e1vVp92Wq-200.jpeg 200w, /assets/images/7e1vVp92Wq-400.jpeg 400w, /assets/images/7e1vVp92Wq-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="desert" class="img-fluid" loading="lazy" decoding="async" src="/assets/images/7e1vVp92Wq-200.jpeg" width="600" height="400"></picture>
+    </div>
+    <div class="col">
+        <picture><source type="image/avif" srcset="/assets/images/v5Tdpg68KH-200.avif 200w, /assets/images/v5Tdpg68KH-400.avif 400w, /assets/images/v5Tdpg68KH-600.avif 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/v5Tdpg68KH-200.jpeg 200w, /assets/images/v5Tdpg68KH-400.jpeg 400w, /assets/images/v5Tdpg68KH-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="ocean" class="img-fluid" loading="lazy" decoding="async" src="/assets/images/v5Tdpg68KH-200.jpeg" width="600" height="399"></picture>
+    </div>
+    <div class="col">
+        <picture><source type="image/avif" srcset="/assets/images/-BCJ1hKTzS-200.avif 200w, /assets/images/-BCJ1hKTzS-400.avif 400w, /assets/images/-BCJ1hKTzS-600.avif 600w" sizes="(min-width: 30em) 50vw, 100vw"><source type="image/jpeg" srcset="/assets/images/-BCJ1hKTzS-200.jpeg 200w, /assets/images/-BCJ1hKTzS-400.jpeg 400w, /assets/images/-BCJ1hKTzS-600.jpeg 600w" sizes="(min-width: 30em) 50vw, 100vw"><img alt="ravine" class="img-fluid" loading="lazy" decoding="async" src="/assets/images/-BCJ1hKTzS-200.jpeg" width="600" height="399"></picture>
+    </div>
+</section>
+
+<section id="why" class="py-5 text-center">
+    <div class="container pb-5">
+        <h2 class="fs-1 fw-bold pb-5">Why Pangia?</h2>
+        <p>An inclusive and tolerant society with equitable access to education and its resources is more resilient and able to respond to crises. Saving our planet will require an informed and engaged population and a global, inclusionary approach. The Pangia platform aims to better inform and inspire the imagination of the public and offer a system by which users can mine data to work towards climate solutions and adaptation strategies.</p>
+    </div>
+</section>
+
+<section id="connect" class="my-5 py-5">
+    <div class="container">
+        <h2>Connect with Us</h2>
+        
+          <!--[if lte IE 8]>
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+          <![endif]-->
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+          <script data-hubspot-rendered="true">hbspt.forms.create({"portalId":20251227,"locale":"en","cssRequired":"","cssClass":"","translations":{"en":{"invalidEmail":"Please enter a valid business email."}},"formId":"da729a3c-8eb2-4fe2-a3e4-d595b926e463"});</script>
+        
+    </div>
+</section>
+
+  <footer>
+    <div class="container my-5 py-5">
+        <div class="row">
+            <div class="col-md-3 col-xm-6 col-xs-12 text-light">
+                <h2 class="fs-4 fw-bold">Contact</h2>
+                <p>
+                    <a target="_blank" href="https://www.clir.org/">Council on Library and Information Resources</a><br>
+                    1800 Diagonal Rd <br>
+                    Suite 600<br>
+                    Alexandria, VA 22314
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
   
-<h1>Pangia Network</h1>
-  
-  <script src="/assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+<script src="/assets/js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>

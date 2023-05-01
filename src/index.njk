@@ -1,6 +1,69 @@
 ---
 layout: base
 title: Pangia Network
+hero_bg: src/assets/images/shutterstock_608942420-scaled.jpg
 ---
+<style>
+    .bg-hero {
+        background-image: url('https://mdbcdn.b-cdn.net/img/Photos/Others/images/76.jpg');
+        height: 66vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+</style>
+<section id="hero" class="bg-hero d-flex align-items-center">
+    <div class="container">
+        <div class="align-self-center p-5 text-center shadow-1-strong rounded mb-5 text-white">
+            <h1 class="mb-3">{{ metadata.title }}</h1>
+            <p>{{ metadata.description }}</p>
+        </div>
+    </div>
+</section>
 
-<h1>{{title}}</h1>
+<section id="video" class="my-5 py-5 text-center">
+    <div class="container">
+
+        <h2 class="fs-1 fw-bold">Overview</h2>
+
+        <div class="ratio ratio-16x9 my-5">
+            <iframe src="https://www.youtube.com/embed/G5sacv_WO_o?rel=0" title="CLIR Pangia Introduction" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="what" class="py-5 text-center">
+    <div class="container py-3">
+        <h2 class="fs-1 fw-bold">What is Pangia?</h2>
+        <p>Pangia is an advanced knowledge environment designed to address the complex challenges posed by the climate crisis. Currently in an exploratory phase of development, Pangia plans to focus on three interconnected climate issues: (1) the loss of cultural heritage, (2) the dispersion and displacement of humanity, and (3) the disaggregation of essential scientific information. By providing a trusted, comprehensible, and coherent information platform, Pangia will engage the public and scholars to discover new knowledge and share information across generations.</p>
+    </div>
+</section>
+
+<section id="photos" class="d-flex flex-row">
+    <div class="col">
+        {% image "src/assets/images/shutterstock_223011424-scaled.jpg", "earth", "(min-width: 30em) 50vw, 100vw"%}
+    </div>
+    <div class="col">
+        {% image "src/assets/images/shutterstock_1756069124-scaled.jpg", "desert", "(min-width: 30em) 50vw, 100vw" %}
+    </div>
+    <div class="col">
+        {% image "src/assets/images/shutterstock_1217937322-scaled.jpg", "ocean", "(min-width: 30em) 50vw, 100vw" %}
+    </div>
+    <div class="col">
+        {% image "src/assets/images/shutterstock_252544699-scaled.jpg", "ravine", "(min-width: 30em) 50vw, 100vw" %}
+    </div>
+</section>
+
+<section id="why" class="py-5 text-center">
+    <div class="container pb-5">
+        <h2 class="fs-1 fw-bold pb-5">Why Pangia?</h2>
+        <p>An inclusive and tolerant society with equitable access to education and its resources is more resilient and able to respond to crises. Saving our planet will require an informed and engaged population and a global, inclusionary approach. The Pangia platform aims to better inform and inspire the imagination of the public and offer a system by which users can mine data to work towards climate solutions and adaptation strategies.</p>
+    </div>
+</section>
+
+<section id="connect" class="my-5 py-5">
+    <div class="container">
+        <h2>Connect with Us</h2>
+        {% hubspotForm "da729a3c-8eb2-4fe2-a3e4-d595b926e463" %}
+    </div>
+</section>

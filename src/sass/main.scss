@@ -1,1 +1,38 @@
 // _src/sass/main.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+
+$gray: #545454;
+$teal: #8CC5D1;
+$mustard: #E4C26A;
+$dark-gray: #292825;
+
+#hero {
+    h1 {
+        font-weight: 700;
+        font-size: 80px;
+    }
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#video {
+    h2 {
+        color: $gray;
+    }
+}
+
+#what {
+    background-color: $teal;
+}
+
+#why {
+    background-color: $mustard;
+}
+
+footer {
+    background-color: $dark-gray;
+}
+
