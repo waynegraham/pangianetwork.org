@@ -1,0 +1,15 @@
+---
+permalink: /site.webmanifest
+---
+{
+    "short_name": "{{ metadata.shortname }}",
+    "name": "{{ site.name }}",
+    "icons": [{
+      "src": "{{ site.icon | url }}",
+      "type": "image/png",
+      "sizes": "192x192"
+    }],
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
+  }

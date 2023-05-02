@@ -1,0 +1,11 @@
+{% macro hero(height='45vh', image='', class='.bg-hero') %}
+<style>
+    .bg-hero {
+        height: {{ height }};
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    {% cssBackground {{ image }}, {{ class }}, [600, 800, 900, 1100, 1500, 2000] %}
+</style>
+{% endmacro %}
