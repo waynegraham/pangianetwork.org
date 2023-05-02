@@ -19,7 +19,7 @@ function generateImages(src, widths){
   let source = path.join(__dirname, "src" , src);
   let options = {
     widths: widths,
-    formats: ['jpeg',],
+    formats: ["webp",'jpeg',],
     outputDir: "docs/assets/images/",
     urlPath: "/assets/images/",
     useCache: true,
@@ -65,26 +65,26 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyPluginHubspot, {
       portalId: 20251227,
-      locale: "en",
-      cssRequired: "",
-      cssClass: "",
-      translations: {
-          en: {
-              invalidEmail: "Please enter a valid business email."
-          },
-      },
-      onBeforeFormInit: function($form) {
-          console.log('onBeforeFormInit formID:', $form.data.id);
-      },
-      onFormReady: function($form) {
-          console.log('onFormReady formID:', $form.data.id);
-      },
-      onFormSubmit: function($form) {
-          console.log('onFormSubmit formID:', $form.data.id);
-      },
-      onFormSubmitted: function($form) {
-          console.log('onFormSubmitted formID:', $form.data.id);
-      }
+      // locale: "en",
+      // cssRequired: "false",
+      // cssClass: "",
+      // translations: {
+      //     en: {
+      //         invalidEmail: "Please enter a valid business email."
+      //     },
+      // },
+      // onBeforeFormInit: function($form) {
+      //     console.log('onBeforeFormInit formID:', $form.data.id);
+      // },
+      // onFormReady: function($form) {
+      //     console.log('onFormReady formID:', $form.data.id);
+      // },
+      // onFormSubmit: function($form) {
+      //     console.log('onFormSubmit formID:', $form.data.id);
+      // },
+      // onFormSubmitted: function($form) {
+      //     console.log('onFormSubmitted formID:', $form.data.id);
+      // }
   });
 
   // shortcodes

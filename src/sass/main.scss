@@ -43,14 +43,13 @@ h2,h3 {
 footer {
     background-color: $dark-gray;
 
-    a {
-        color: #fff;
-    }
+    h1,h2,h3,h4,h5 { color: #fff; }
+
 }
 
 // @see https://getbootstrap.com/docs/5.3/examples/cover/
 .nav-masthead .nav-link {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, 1);
     border-bottom: .25rem solid transparent;
 }
 
