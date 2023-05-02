@@ -4,7 +4,7 @@
   "description": "Pangia Network Website",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass --watch src/sass:docs/assets/css",
+    "watch:sass": "sass --watch src/sass:docs/assets/css --style=compressed",
     "build:sass": "sass src/sass:docs/assets/css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",

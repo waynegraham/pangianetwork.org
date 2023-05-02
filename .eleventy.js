@@ -21,7 +21,7 @@ function generateImages(src, widths){
     widths: widths,
     formats: ["webp",'jpeg',],
     outputDir: "docs/assets/images/",
-    urlPath: "/assets/images/",
+    urlPath: "/pangianetwork.org/assets/images/",
     useCache: true,
     sharpJpegOptions: {
       quality: 99,
@@ -97,7 +97,7 @@ module.exports = function (eleventyConfig) {
 			widths: [200, 400, 600],
 			formats: ["avif", "jpeg", null],
       outputDir: path.join(eleventyConfig.dir.output, "assets", "images"),
-      urlPath: "/assets/images/"
+      urlPath: "/pangianetwork.org/assets/images/"
 		});
 
 		let imageAttributes = {
@@ -177,6 +177,6 @@ module.exports = function (eleventyConfig) {
       // Pre-process *.md files with: (default: `liquid`)
       markdownTemplateEngine: "njk",
 
-      pathPrefix: '', // omit this line if using custom domain
+      pathPrefix: 'pangianetwork.org', // omit this line if using custom domain
   };
 };
