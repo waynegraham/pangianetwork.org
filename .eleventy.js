@@ -5,7 +5,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require('markdown-it-attrs');
 const slugify = require("slugify");
 const path = require("path");
-
+const sass = require("sass");
 
 // @11ty plugins
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation"); // https://www.11ty.dev/docs/plugins/navigation/
@@ -63,28 +63,9 @@ module.exports = function (eleventyConfig) {
   // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // https://www.npmjs.com/package/eleventy-plugin-hubspot
   eleventyConfig.addPlugin(eleventyPluginHubspot, {
-      portalId: 20251227,
-      // locale: "en",
-      // cssRequired: "false",
-      // cssClass: "",
-      // translations: {
-      //     en: {
-      //         invalidEmail: "Please enter a valid business email."
-      //     },
-      // },
-      // onBeforeFormInit: function($form) {
-      //     console.log('onBeforeFormInit formID:', $form.data.id);
-      // },
-      // onFormReady: function($form) {
-      //     console.log('onFormReady formID:', $form.data.id);
-      // },
-      // onFormSubmit: function($form) {
-      //     console.log('onFormSubmit formID:', $form.data.id);
-      // },
-      // onFormSubmitted: function($form) {
-      //     console.log('onFormSubmitted formID:', $form.data.id);
-      // }
+      portalId: 20251227
   });
 
   // shortcodes
