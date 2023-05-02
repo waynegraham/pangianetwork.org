@@ -14,9 +14,40 @@ const Image = require("@11ty/eleventy-img"); // https://www.11ty.dev/docs/plugin
 
 const eleventyPluginHubspot = require('eleventy-plugin-hubspot'); // https://www.npmjs.com/package/eleventy-plugin-hubspot
 
+// https://github.com/11ty/eleventy-img/issues/46#issuecomment-766054646
+function generateImages(src, widths){
+  let source = path.join(__dirname, "src" , src);
+  let options = {
+    widths: widths,
+    formats: ['jpeg',],
+    outputDir: "docs/assets/images/",
+    urlPath: "/assets/images/",
+    useCache: true,
+    sharpJpegOptions: {
+      quality: 99,
+      progressive: true
+    }
+  };
+  // genrate images, ! dont wait
+  Image(source, options);
+  // get metadata even the image are not fully generated
+  return Image.statsSync(source, options);
+}
+
+function imageCssBackground (src, selector, widths){
+  const metadata = generateImages(src, widths);
+  let markup = [`${selector} { background-image: url(${metadata.jpeg[0].url});} `];
+  // i use always jpeg for backgrounds
+  metadata.jpeg.slice(1).forEach((image, idx) => {
+    markup.push(`@media (min-width: ${metadata.jpeg[idx].width}px) { ${selector} {background-image: url(${image.url});}}`);
+  });
+  return markup.join("");
+}
+
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy("src/assets");
+
 
   // Watch CSS files for changes
   eleventyConfig.setBrowserSyncConfig({
@@ -30,6 +61,8 @@ module.exports = function (eleventyConfig) {
   });
 
   // plugins
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
   eleventyConfig.addPlugin(eleventyPluginHubspot, {
       portalId: 20251227,
       locale: "en",
@@ -55,6 +88,10 @@ module.exports = function (eleventyConfig) {
   });
 
   // shortcodes
+
+  eleventyConfig.addNunjucksShortcode("cssBackground", imageCssBackground);
+
+  // https://www.11ty.dev/docs/plugins/image/
   eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
 		let metadata = await Image(src, {
 			widths: [200, 400, 600],

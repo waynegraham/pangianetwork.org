@@ -1,16 +1,14 @@
 <!doctype html>
-<html class="no-js" lang="{{ metadata.language }}">
+<html lang="{{ metadata.language }}">
 
 <head>
   {% include 'head.njk' %} 
 </head>
 
 <body>
-
   {{ content | safe }}
 
   {% include 'footer.njk' %}
-  
   {% include 'scripts.njk' %}
 </body>
 
