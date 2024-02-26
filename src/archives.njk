@@ -10,19 +10,28 @@ eleventyNavigation:
 
     <h2>Blogposts</h2>
     <ul>
-        <li>
-            <a href="https://www.clir.org/2021/02/clir-issues-139/#three-questions-with-buhle-mbambo-thata">Three Questions with CLIR Board Chair Buhle Mbambo-Thata</a> (February 18, 2021)
-        </li>
+        {% for post in posts %}
+            <li>
+                <a target="_blank" href="{{ post.url }}">{{ post.title }}</a> 
+                <span class="date">{{ post.date }}</span>
+            </li>
+        {% endfor %}
     </ul>
     <hr>
 
-    <h2>Talks</h2>
+    {# <h2>Talks</h2>
 
+    <hr> #}
+
+    <h2>Reports</h2>
+    <ul>
+        <li>Banks, Joy M. “The Foundations of Discovery: A Report on the Assessment of the Impacts of the Cataloging Hidden Collections Program, 2008–2019”. Zenodo, September 1, 2019. <a href="https://doi.org/10.5281/zenodo.7810583">https://doi.org/10.5281/zenodo.7810583</a>.</li>
+    </ul>
     <hr>
 
-    <h2>Workshops</h2>
+    {# <h2>Workshops</h2>
 
-    <hr>
+    <hr> #}
 
     <h2>Material Memory Podcast - Season 2</h2>
 
