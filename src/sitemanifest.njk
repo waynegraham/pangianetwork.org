@@ -3,9 +3,9 @@ permalink: /site.webmanifest
 ---
 {
     "short_name": "{{ metadata.shortname }}",
-    "name": "{{ site.name }}",
+    "name": "{{ metadata.title }}",
     "icons": [{
-      "src": "{{ site.icon | url }}",
+      "src": "{{ metadata.icon | url }}",
       "type": "image/png",
       "sizes": "192x192"
     }],

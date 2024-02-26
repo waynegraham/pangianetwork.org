@@ -1,8 +1,8 @@
 {
     "short_name": "",
-    "name": "",
+    "name": "Pangia Network",
     "icons": [{
-      "src": ".",
+      "src": "/pangianetwork.org/assets/images/icon.png",
       "type": "image/png",
       "sizes": "192x192"
     }],

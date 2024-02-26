@@ -4,5 +4,6 @@
     "shorttitle": "Pangia",
     "description": "An Information Platform for Climate Challenges",
     "themecolor": "#fafafa",
-    "uakey": "G-72ZZCRC8G8"
+    "uakey": "G-72ZZCRC8G8",
+    "icon": "/assets/images/icon.png"
 }

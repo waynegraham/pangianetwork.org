@@ -7,6 +7,10 @@ module.exports = {
         {
             text: 'About',
             url: '/en/about/'
+        },
+        {
+            text: 'Archives',
+            url: '/en/about/'
         }
     ]
 }
