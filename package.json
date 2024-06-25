@@ -4,12 +4,13 @@
   "description": "Pangia Network Website",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass --style=compressed --watch src/sass:docs/assets/css ",
-    "build:sass": "sass src/sass:docs/assets/css",
-    "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:*"
+    "start": "eleventy --serve --incremental",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "bench": "DEBUG=Eleventy:Benchmark* eleventy",
+    "build": "eleventy && npx pagefind --site _site",
+    "build:index": "npx pagefind --site _site",
+    "clean": "del-cli _site"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,13 @@
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@popperjs/core": "^2.11.8",
+    "autoprefixer": "^10.4.19",
+    "bootstrap": "^5.3.3",
+    "cssnano": "^7.0.3",
+    "del-cli": "^5.1.0",
     "eleventy-plugin-hubspot": "^1.0.4",
     "luxon": "^3.3.0",
     "markdown-it": "^13.0.1",
@@ -27,7 +35,9 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.23",
     "sass": "^1.62.1",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "striptags": "^3.2.0",
+    "vite": "^5.3.1"
   },
   "browserslist": [
     "> 0.2%",

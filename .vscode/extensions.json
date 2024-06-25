@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "ginfuru.better-nunjucks",
+        "okitavera.vscode-nunjucks-formatter",
+        "esbenp.prettier-vscode",
+    ]
+}

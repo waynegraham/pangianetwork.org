@@ -1,0 +1,9 @@
+{
+    "editor.formatOnSave": true,
+    "emmet.includeLanguages": {
+      "njk": "html"
+    },
+    "files.associations": {
+      "*.njk": "html"
+    }
+  }
