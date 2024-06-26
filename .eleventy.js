@@ -21,6 +21,26 @@ const eleventyPluginHubspot = require('eleventy-plugin-hubspot') // https://www.
 
 const pluginImages = require('./eleventy.images.js')
 
+// https://github.com/11ty/eleventy-img/issues/46#issuecomment-766054646
+function generateImages(src, widths) {
+	let source = path.join(__dirname, 'src', src)
+	let options = {
+		widths: widths,
+		formats: ['webp', 'jpeg'],
+		outputDir: '_site/assets/images/',
+		urlPath: '/assets/images/',
+		useCache: true,
+		sharpJpegOptions: {
+			quality: 99,
+			progressive: true
+		}
+	}
+	// genrate images, ! dont wait
+	Image(source, options)
+	// get metadata even the image are not fully generated
+	return Image.statsSync(source, options)
+}
+
 function imageCssBackground(src, selector, widths) {
 	const metadata = generateImages(src, widths)
 	let markup = [
@@ -63,7 +83,7 @@ module.exports = function (eleventyConfig) {
 			clearScreen: false,
 			appType: 'mpa', // New in v2.0.0
 			assetsInclude: ['**/*.xml', '**/*.txt', 'CNAME'],
-			base: '/pangianetwork.org',
+			// base: '/pangianetwork.org',
 
 			// plugins: [pagefind()],
 
@@ -86,6 +106,8 @@ module.exports = function (eleventyConfig) {
 			}
 		}
 	})
+
+	eleventyConfig.addPlugin(pluginImages)
 
 	// Customize Markdown library settings:
 
@@ -257,7 +279,7 @@ module.exports = function (eleventyConfig) {
 	return {
 		dir: {
 			input: 'src',
-			// output: './docs',
+			output: '_site',
 			layouts: '_layouts',
 			data: '_data',
 			includes: '_includes'

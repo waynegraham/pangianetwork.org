@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
 			}
 
 			let metadata = await eleventyImage(input, {
-				widths: widths || ['auto'],
+				widths: widths || [200, 'auto'],
 				formats,
 				outputDir: path.join(eleventyConfig.dir.output, 'img') // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
 			})
@@ -49,7 +49,8 @@ module.exports = function (eleventyConfig) {
 			let imageAttributes = {
 				alt,
 				class: cls,
-				sizes,
+				// sizes,
+				sizes: '(min-width: 30em) 50vw, 100vw',
 				loading: 'lazy',
 				decoding: 'async'
 			}

@@ -1,11 +1,16 @@
 {# https://www.11ty.dev/docs/plugins/navigation/#bring-your-own-html-render-the-menu-items-manually #}
 {%- set navPages = collections.all | eleventyNavigation %}
-<header class="mb-auto mt-5 me-5" >
-    <div>
-        <nav class="nav nav-masthead justify-content-center">
-            {%- for entry in navPages %}
-                <a class="link-light nav-link fw-bold py-1 px-0 {% if entry.url == page.url %}active{%endif %}" {% if entry.url == page.url %}aria-current="page"{%endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
-            {%- endfor %}
-        </nav>
-    </div>
+
+<header role="banner">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0 ms-auto">
+                {%- for entry in navPages %}
+                    <li class="nav-item">
+                        <a class="link-light fw-bold nav-link {% if entry.url == page.url %}active{%endif %}" {% if entry.url == page.url %}aria-current="page"{%endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
 </header>

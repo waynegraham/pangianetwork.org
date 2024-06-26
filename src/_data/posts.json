@@ -1,27 +1,32 @@
 [
-    {
-        "title": "Pangia: A Global Interoperable Affiliation of Digital Libraries",
-        "date": "April 11, 2019",
-        "url": "https://www.clir.org/2019/04/clir-issues-128/#pangia"
-    },
-    {
-        "title": "Three Questions with CLIR Board Chair Buhle Mbambo-Thata",
-        "date": "February 18, 2021",
-        "url": "https://www.clir.org/2021/02/clir-issues-139/#three-questions-with-buhle-mbambo-thata"
-    },
-    {
-        "title": "CLIR's Mission in the Era of Climate Disruption",
-        "date": "August 9, 2019",
-        "url": "https://www.clir.org/2019/08/clirs-mission-in-the-era-of-climate-disruption/"
-    },
-    {
-        "title": "Rebuilding",
-        "date": "April 7, 2020",
-        "url": "https://www.clir.org/2020/04/rebuilding/"
-    },
-    {
-        "title": "To Be Part of the Climate Solution, We Must Center Communities",
-        "date": "August 14, 2019",
-        "url": "https://www.clir.org/2019/08/to-be-part-of-the-climate-solution-we-must-center-communities/"
-    }
+	{
+		"title": "Pangia: A Global Interoperable Affiliation of Digital Libraries",
+		"date": "April 11, 2019",
+		"url": "https://www.clir.org/2019/04/clir-issues-128/#pangia",
+		"blurb": ""
+	},
+	{
+		"title": "Three Questions with CLIR Board Chair Buhle Mbambo-Thata",
+		"date": "February 18, 2021",
+		"url": "https://www.clir.org/2021/02/clir-issues-139/#three-questions-with-buhle-mbambo-thata",
+		"blurb": ""
+	},
+	{
+		"title": "CLIR's Mission in the Era of Climate Disruption",
+		"date": "August 9, 2019",
+		"url": "https://www.clir.org/2019/08/clirs-mission-in-the-era-of-climate-disruption/",
+		"blurb": ""
+	},
+	{
+		"title": "Rebuilding",
+		"date": "April 7, 2020",
+		"url": "https://www.clir.org/2020/04/rebuilding/",
+		"blurb": ""
+	},
+	{
+		"title": "To Be Part of the Climate Solution, We Must Center Communities",
+		"date": "August 14, 2019",
+		"url": "https://www.clir.org/2019/08/to-be-part-of-the-climate-solution-we-must-center-communities/",
+		"blurb": ""
+	}
 ]

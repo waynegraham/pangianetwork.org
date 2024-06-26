@@ -1,25 +1,32 @@
 ---
 layout: base
 ---
-{%- set css -%}
-.bg-hero {
+
+{%- set css -%} 
+.bg-hero { 
     height: {{ height | default("65vh", true) }};
-    background-size: cover;
-    background-repeat: no-repeat;
-    {# background-position: center; #}
-}
-{# {% cssBackground hero_bg, ".bg-hero", [600, 800, 900, 1100, 1500, 2000] %} #}
+    background-size: cover; background-repeat: no-repeat; 
+    {# background-position: center; #} 
+} 
+{% cssBackground hero_bg, ".bg-hero", [600, 800, 900, 1100, 1500, 2000] %}
 {%- endset -%}
-<style>{{ css | safe | trim }}</style>
+<style>
+	{{ css | safe | trim }}
+</style>
+
+{% include 'navigation.njk' %}
+
 <section id="hero" class="bg-hero d-flex align-items-center">
-        <div class="align-self-center w-100 p-5 text-center shadow-1-strong rounded mb-5 text-white">
-            <h1 class="mb-3">{{ title }}</h1>
-            <p>{{ description }}</p>
-        </div>
-    </div>
-    {% include 'navigation.njk' %}
+
+	<div
+		class="align-self-center w-100 p-5 text-center shadow-1-strong rounded mb-5 text-white"
+	>
+		<h1 class="mb-3">{{ title }}</h1>
+		<p>{{ description }}</p>
+	</div>
+	
 </section>
 
 <main>
-{{ content | safe }}
+	{{ content | safe }}
 </main>

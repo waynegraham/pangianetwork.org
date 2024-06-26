@@ -1,0 +1,163 @@
+---
+layout: page
+title: Resources
+height: 40vh
+hero_bg: assets/images/pawel-czerwinski-oykbZuvajO0-unsplash.jpg
+eleventyNavigation:
+  key: Resources
+  order: 3
+---
+
+<div class="container pt-5">
+	<div class="py-5 border-bottom">
+		<div class="row justify-content-center text-center">
+			<div class="col-lg-9 col-xl-8 pb-5">
+				<h2 class="text-decoration-underline mb-3 fs-1">Blogposts</h2>
+				<p class="lead text-body-tertiary fst-italic">
+					Blog posts and writing about the intellectual underpinnings of the
+					project.
+				</p>
+			</div>
+		</div>
+		<ul>
+			{% for post in posts %}
+			<li>
+				<a target="_blank" href="{{ post.url }}">{{ post.title }}</a>
+				<span class="date">{{ post.date }}</span>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	{#
+	<h2>Talks</h2>
+
+	<hr />
+	#}
+	<div class="py-5 border-bottom">
+		<div class="row justify-content-center text-center">
+			<div class="col-lg-9 col-xl-8 pb-5">
+				<h2 class="text-decoration-underline mb-3 fs-1">Reports</h2>
+				<p class="lead text-body-tertiary fst-italic"></p>
+			</div>
+		</div>
+		<ul>
+			<li>
+				Banks, Joy M. "The Foundations of Discovery: A Report on the Assessment
+				of the Impacts of the Cataloging Hidden Collections Program, 2008-2019".
+				Zenodo, September 1, 2019.
+				<a href="https://doi.org/10.5281/zenodo.7810583"
+					>https://doi.org/10.5281/zenodo.7810583</a
+				>.
+			</li>
+		</ul>
+	</div>
+
+	{#
+	<h2>Workshops</h2>
+
+	<hr />
+	#}
+	<div class="py-5 border-bottom">
+		<div class="row justify-content-center text-center">
+			<div class="col-lg-9 col-xl-8 pb-5">
+				<h2 class="text-decoration-underline mb-3 fs-1">
+					Material Memory Podcast - Season 2
+				</h2>
+				<p class="lead text-body-tertiary fst-italic">
+					CLIR's podcast season dedicated to Climate Change
+				</p>
+			</div>
+		</div>
+
+		<p>
+			Season two of
+			<a target="_blank" href="https://material-memory.clir.org/"
+				>Material Memory</a
+			>
+			explored the impact of the climate crisis on communities and their
+			cultural heritage.
+		</p>
+
+		<p>
+			How does climate change threaten our records and traditions? What is the
+			relationship between memory and disaster? How will the unequal effects of
+			the climate crisis alter the historical record? What are the preservation
+			needs of communities at risk of displacement? And what role does heritage
+			play in identity and resilience?
+		</p>
+
+		<p>
+			The season will take a critical look at the role of information and
+			cultural heritage professionals in responding to the crisis, and consider
+			how different approaches to preservation can help or harm affected
+			communities.
+		</p>
+	</div>
+	<div class="py-5 border-bottom">
+		<h3 class="py-4">Episodes</h3>
+
+		<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+			{% for podcast in podcasts %}
+			<div class="col">
+				<div class="card shadow-sm h-100">
+					<div class="card-body bg-light">
+						<h2 class="card-title" data-pagefind-meta="title">
+							{{ podcast.title }}
+						</h2>
+						<p>{{ podcast.date }}</p>
+						<p>{{ podcast.summary | safe }}</p>
+						<audio id="{{ podcast.id }}" controls>
+							<source src="{{ podcast.mp3 }}" />
+						</audio>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+	<div class="py-5 border-bottom">
+		<div class="row justify-content-center text-center">
+			<div class="col-lg-9 col-xl-8 pb-5">
+				<h2 class="text-decoration-underline mb-3 fs-1">Videos</h2>
+			</div>
+		</div>
+
+		<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 g-3">
+			{% for video in youtube %}
+			<div class="col">
+				<div class="card shadow-sm h-100">
+					<div class="card-body bg-light">
+						<h2 class="card-title">{{ video.title }}</h2>
+						<div
+							class="js-player"
+							data-plyr-provider="youtube"
+							data-plyr-embed-id="{{ video.id }}"
+						></div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css"
+	integrity="sha512-yexU9hwne3MaLL2PG+YJDhaySS9NWcj6z7MvUDSoMhwNghPgXgcvYgVhfj4FMYpPh1Of7bt8/RK5A0rQ9fPMOw=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.min.js"
+	integrity="sha512-vONptKEoKbP1gaC5UkbYDa9OPr04ur4bxaaqT7DAJxGHB2oogtseCPrl5e5hPFokGYotlGNV4d+GM593ka7iNA=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+></script>
+<script>
+	// https://github.com/sampotts/plyr?tab=readme-ov-file#multiple-players
+	const players = Array.from(document.querySelectorAll('.js-player')).map(
+		(p) => new Plyr(p)
+	)
+</script>

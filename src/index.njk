@@ -3,6 +3,9 @@ layout: page
 title: Pangia Network
 description: An Information Platform for Climate Challenges
 hero_bg: assets/images/shutterstock_608942420-scaled.jpg
+eleventyNavigation:
+  key: Home
+  order: 1
 ---
 
 <section id="video" class="my-5 py-5 text-center">
@@ -38,20 +41,20 @@ hero_bg: assets/images/shutterstock_608942420-scaled.jpg
 
 <section id="photos" class="d-flex flex-row">
 	<div class="col">
-		{# {% image "src/assets/images/shutterstock_223011424-scaled.jpg", "earth",
-		"(min-width: 30em) 50vw, 100vw"%} #}
+		{% image "assets/images/shutterstock_223011424-scaled.jpg", "earth",
+		"img-fluid" %}
 	</div>
 	<div class="col">
-		{# {% image "src/assets/images/shutterstock_1756069124-scaled.jpg",
-		"desert", "(min-width: 30em) 50vw, 100vw" %} #}
+		{% image "assets/images/shutterstock_1756069124-scaled.jpg", "desert",
+		'img-fluid' %}
 	</div>
 	<div class="col">
-		{# {% image "src/assets/images/shutterstock_1217937322-scaled.jpg", "ocean",
-		"(min-width: 30em) 50vw, 100vw" %} #}
+		{% image "assets/images/shutterstock_1217937322-scaled.jpg",
+		"ocean",'img-fluid' %}
 	</div>
 	<div class="col">
-		{# {% image "src/assets/images/shutterstock_252544699-scaled.jpg", "ravine",
-		"(min-width: 30em) 50vw, 100vw" %} #}
+		{% image "assets/images/shutterstock_252544699-scaled.jpg", "ravine",
+		'img-fluid' %}
 	</div>
 </section>
 

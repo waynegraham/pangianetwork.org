@@ -1,11 +1,22 @@
 // _src/sass/main.scss
 
+@import 'menu';
+
+// See https://getbootstrap.com/docs/5.3/customize/sass/
+
+// Import all of Bootstrap's CSS
+@import '~bootstrap/scss/bootstrap';
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
 
 $gray: #545454;
 $teal: #8cc5d1;
 $mustard: #e4c26a;
 $dark-gray: #292825;
+
+.lead {
+	font-family: Times, serif;
+}
 
 #hero {
 	h1 {
