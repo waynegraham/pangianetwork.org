@@ -1,2 +1,6 @@
 // formatting files to ignore
 src/_layouts/page.njk
+src/robots.txt.njk
+src/build.txt.njk
+src/sitemap.xml.njk
+src/sitemanifest.njk

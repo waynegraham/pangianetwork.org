@@ -2,5 +2,8 @@
 permalink: /public/robots.txt
 ---
 
-{%- set sitemap_url = [site.url, '/sitemap.xml'] | join %} User-agent: *
-Disallow: Disallow: /build.txt sitemap: {{ sitemap_url }}
+{%- set sitemap_url = [site.url, '/sitemap.xml'] | join %} 
+User-agent: *
+Disallow: /build.txt
+
+sitemap: {{ sitemap_url }}

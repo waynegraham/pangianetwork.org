@@ -1,8 +1,9 @@
 ---
 permalink: /site.webmanifest
+eleventyExcludeFromCollections: true
 ---
 {
-    "short_name": "{{ metadata.shortname }}",
+    "short_name": "{{ metadata.shorttitle }}",
     "name": "{{ metadata.title }}",
     "icons": [{
       "src": "{{ metadata.icon | url }}",
